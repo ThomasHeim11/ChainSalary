@@ -11,3 +11,9 @@ body {
   font-family: "Andale Mono", sans-serif;
   margin: 0;
 }
+
+.FooterIconContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

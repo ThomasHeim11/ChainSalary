@@ -14,7 +14,7 @@
 .Input {
   display: flex;
   flex-direction: column;
-  background: rgb(240,248,255);
+  background: rgb(240, 248, 255);
   width: 175vh;
   height: 95vh;
   border-radius: 10px;
@@ -124,7 +124,6 @@
   margin: 20px;
 }
 
-
 .Info {
   font-size: 24px;
   margin: 10px;
@@ -205,4 +204,24 @@
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
+}
+
+.WalletLabel {
+  font-family: "Arial", sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+  color: #ffa500;
+  position: relative;
+  display: inline-block;
+  padding: 10px 20px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+
+.WalletLabel span {
+  font-size: 16px;
+  color: #888;
+  margin-left: 10px;
 }
