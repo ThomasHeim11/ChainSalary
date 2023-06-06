@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ethers } from "ethers";
 import contractInfo from "./contract/SalaryAutomation.json";
 import "./App.css";
@@ -13,15 +13,32 @@ function App() {
   // State variables
   const [account, setAccount] = useState([]);
   const [contract, setContract] = useState("");
+  const [network, setNetwork] = useState("");
+  const [networkName, setNetworkName] = useState("");
 
-  // Connect MetaMask account
+  useEffect(() => {
+    if (account.length) {
+      const getNetwork = async () => {
+        try {
+          const provider = new ethers.providers.Web3Provider(window.ethereum);
+          const networkName = (await provider.getNetwork()).name;
+          setNetwork(networkName);
+        } catch (error) {
+          console.error(error);
+        }
+      };
+      getNetwork();
+    }
+  }, [account]);
+
   const connectAccount = async () => {
     try {
       if (window.ethereum) {
-        const user = await window.ethereum.request({
+        const [user] = await window.ethereum.request({
           method: "eth_requestAccounts",
         });
-        setAccount(user);
+        setAccount([user]);
+        updateNetworkName();
       } else {
         window.alert("Need MetaMask Installed.");
       }
@@ -30,13 +47,21 @@ function App() {
     }
   };
 
+  const updateNetworkName = async () => {
+    if (window.ethereum) {
+      const provider = new ethers.providers.Web3Provider(window.ethereum);
+      const network = await provider.getNetwork();
+      setNetworkName(network.name);
+    }
+  };
+
   // Deploys contract with relevant information provided by user
   const deployContract = async (event) => {
     event.preventDefault();
-    let data = new FormData(event.target);
-    let address = data.get("address");
-    let salary = data.get("salary");
-    let registry = data.get("registry");
+    const data = new FormData(event.target);
+    const address = data.get("address");
+    const salary = data.get("salary");
+    const registry = data.get("registry");
 
     try {
       await window.ethereum.request({ method: "eth_requestAccounts" });
@@ -48,10 +73,6 @@ function App() {
       if (networkName === "homestead") {
         try {
           const signer = provider.getSigner();
-
-          address = ethers.utils.getAddress(address);
-          registry = ethers.utils.getAddress(registry);
-          salary = parseInt(salary);
 
           const factory = new ethers.ContractFactory(
             contractInfo.abi,
@@ -99,7 +120,7 @@ function App() {
             <label className="WalletLabel">
               Connected Wallet: {account[0]}
             </label>
-            <label className="NetworkLabel">Mainnet</label>
+            <label className="NetworkLabel">{networkName}</label>
           </div>
           <div className="line"></div>
           <label className="InputInfo">
