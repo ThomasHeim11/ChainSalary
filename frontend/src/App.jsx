@@ -120,7 +120,11 @@ function App() {
             <label className="WalletLabel">
               Connected Wallet: {account[0]}
             </label>
-            <label className="NetworkLabel">{networkName}</label>
+            <div className="NetworkBox">
+              <label className="NetworkLabel" style={{ marginLeft: "auto" }}>
+                {networkName}
+              </label>
+            </div>
           </div>
           <div className="line"></div>
           <label className="InputInfo">
