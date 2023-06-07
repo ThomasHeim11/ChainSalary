@@ -37,9 +37,9 @@
   font-size: 25px;
   margin-top: 7px;
   margin-bottom: 5px;
-  border-radius: 10px; /* Add this line to set the border radius */
+  border-radius: 10px;
+  color: black; /* Add this line to set the text color to black */
 }
-
 
 .InputLine {
   margin: 15px;
@@ -136,14 +136,14 @@
   display: inline-block;
   padding: 8px 18px;
   border-radius: 18px;
-  background-color: rgba(15,200,237,0.25);
+  background-color: rgba(15, 200, 237, 0.25);
   text-transform: uppercase; /* Added text-transform property */
 }
 
 .Header {
   color: whitesmoke;
   font-size: 65px;
-  font-family: monospace;
+  font-family: "Courier New", monospace;
   margin: 20px;
 }
 
