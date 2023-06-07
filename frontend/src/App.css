@@ -105,11 +105,23 @@
 }
 
 .NextStepsList {
-  font-size: 20px;
-  font-weight: bold;
-  color: whitesmoke;
-  margin-left: 75px;
+  background: rgba(0, 0, 128, 0.18);
+  color: #FFFFFF;
+  padding: 38px;
+  border-radius: 30px;
+  font-size: 20px; /* Adjust the font size as needed */
+  line-height: 1.5; /* Set the line height to ensure proper spacing */
+  width: 80%;
+  margin-left: 5%;
 }
+
+.NextStepsList li {
+  padding: 5px 0; /* Adjust the vertical padding as needed */
+  list-style-type: decimal;
+  font-size: 18px; /* Adjust the font size for the list items as needed */
+}
+
+
 
 .Deploy {
   width: 150px;
