@@ -11,10 +11,7 @@ const Header = () => {
   return (
     <motion.div
       className="flex-1 text-center font-secondary lg:text-left"
-      style={{
-        textAlign: "center",
-        fontFamily: "Courier New, monospace",
-      }}
+      style={{ textAlign: "center" }}
     >
       <motion.h1
         variants={fadeIn("up", 0.3)}
@@ -22,12 +19,13 @@ const Header = () => {
         animate="show"
         className="text-[55px] font-bold leading-[0.8] lg:text-[110px]"
         style={{
+          fontFamily: "Courier New, monospace",
           fontSize: "150px",
           fontWeight: "bold",
           color: "#FFFFFF",
         }}
       >
-        Chain<span>Salary</span>
+        Chain <span>Salery</span>
       </motion.h1>
       <motion.div
         variants={fadeIn("up", 0.4)}
@@ -36,7 +34,7 @@ const Header = () => {
         className="mb-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1]"
         style={{ fontFamily: "Courier New, monospace" }}
       >
-        <span className="text-white mr-10" style={{ fontSize: "3rem" }}>
+        <span className="text-white mr-10" style={{ fontSize: "1.5rem" }}>
           🤩
         </span>
         <TypeAnimation
@@ -52,9 +50,16 @@ const Header = () => {
           className="text-accent"
           wrapper="span"
           repeat={Infinity}
-          style={{ fontSize: "3rem" }}
+          style={{ fontSize: "2rem" }} // Adjust the font size here
         />
       </motion.div>
+      <motion.p
+        variants={fadeIn("up", 0.5)}
+        initial="hidden"
+        animate="show"
+        className="mb-8 max-w-lg mx-auto lg:mg-0"
+        style={{ fontFamily: "Courier New, monospace" }}
+      ></motion.p>
     </motion.div>
   );
 };
