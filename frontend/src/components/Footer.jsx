@@ -5,7 +5,7 @@ function Footer() {
   return (
     <footer className="Footer">
       <div className="FooterContent">
-        <p className="FooterText Poppins">
+        <p className="FooterText Poppins" style={{ fontSize: "22px" }}>
           🔥🔥🔥MADE DURING CHAINLINK SPRING 2023 HACKATHON BY THOMAS HEIM🔥🔥🔥
         </p>
         <div className="FooterIcons">
