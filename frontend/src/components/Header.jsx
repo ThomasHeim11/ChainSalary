@@ -7,7 +7,7 @@ function Header() {
     fontWeight: "bold",
     color: "#FFFFFF",
     backgroundColor: "#5A10",
-    padding: "100px",
+    padding: "110px",
     textAlign: "center",
   };
 
