@@ -34,7 +34,7 @@ const Header = () => {
         className="mb-6 text-[36px] lg:text-[60px] font-secondary font-semibold uppercase leading-[1]"
         style={{ fontFamily: "Courier New, monospace" }}
       >
-        <span className="text-white mr-10" style={{ fontSize: "1.5rem" }}>
+        <span className="text-white mr-10" style={{ fontSize: "3rem" }}>
           🤩
         </span>
         <TypeAnimation
@@ -50,7 +50,7 @@ const Header = () => {
           className="text-accent"
           wrapper="span"
           repeat={Infinity}
-          style={{ fontSize: "2rem" }} // Adjust the font size here
+          style={{ fontSize: "4rem" }} // Adjust the font size here
         />
       </motion.div>
       <motion.p
