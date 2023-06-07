@@ -16,8 +16,8 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaGithub className="FooterIcon" />
-              GitHub
+              <FaGithub className="FooterIcon" style={{ fontSize: "24px", color: "white" }} />
+              <span style={{ fontSize: "24px", color: "white" }}>GitHub</span>
             </a>
           </div>
           <div className="FooterIconContainer">
@@ -27,8 +27,8 @@ function Footer() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaLinkedin className="FooterIcon" />
-              LinkedIn
+              <FaLinkedin className="FooterIcon" style={{ fontSize: "24px", color: "white" }} />
+              <span style={{ fontSize: "24px", color: "white" }}>LinkedIn</span>
             </a>
           </div>
         </div>
