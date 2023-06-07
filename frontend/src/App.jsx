@@ -14,15 +14,14 @@ function App() {
   const [account, setAccount] = useState([]);
   const [contract, setContract] = useState("");
   const [network, setNetwork] = useState("");
-  const [networkName, setNetworkName] = useState("");
 
   useEffect(() => {
     if (account.length) {
       const getNetwork = async () => {
         try {
           const provider = new ethers.providers.Web3Provider(window.ethereum);
-          const networkName = (await provider.getNetwork()).name;
-          setNetwork(networkName);
+          const network = await provider.getNetwork();
+          setNetwork(network.chainId.toString());
         } catch (error) {
           console.error(error);
         }
@@ -31,14 +30,14 @@ function App() {
     }
   }, [account]);
 
+  // Connect MetaMask account
   const connectAccount = async () => {
     try {
       if (window.ethereum) {
-        const [user] = await window.ethereum.request({
+        const user = await window.ethereum.request({
           method: "eth_requestAccounts",
         });
-        setAccount([user]);
-        updateNetworkName();
+        setAccount(user);
       } else {
         window.alert("Need MetaMask Installed.");
       }
@@ -47,32 +46,28 @@ function App() {
     }
   };
 
-  const updateNetworkName = async () => {
-    if (window.ethereum) {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const network = await provider.getNetwork();
-      setNetworkName(network.name);
-    }
-  };
-
   // Deploys contract with relevant information provided by user
   const deployContract = async (event) => {
     event.preventDefault();
-    const data = new FormData(event.target);
-    const address = data.get("address");
-    const salary = data.get("salary");
-    const registry = data.get("registry");
+    let data = new FormData(event.target);
+    let address = data.get("address");
+    let salary = data.get("salary");
+    let registry = data.get("registry");
 
     try {
       await window.ethereum.request({ method: "eth_requestAccounts" });
       const provider = new ethers.providers.Web3Provider(window.ethereum);
 
-      const networkName = (await provider.getNetwork()).name;
+      const networkName = (await provider.getNetwork()).chainId.toString();
 
-      // Checks if user is connected to Mainnet
-      if (networkName === "homestead") {
+      // Checks if user is connected to Sepolia network (network ID: 12345)
+      if (networkName === "11155111") {
         try {
           const signer = provider.getSigner();
+
+          address = ethers.utils.getAddress(address);
+          registry = ethers.utils.getAddress(registry);
+          salary = parseInt(salary);
 
           const factory = new ethers.ContractFactory(
             contractInfo.abi,
@@ -105,7 +100,7 @@ function App() {
           window.alert(error.message);
         }
       } else {
-        window.alert("Need to be on Mainnet");
+        window.alert("Need to be on Sepolia network");
       }
     } catch (error) {
       window.alert(error.message);
@@ -120,11 +115,7 @@ function App() {
             <label className="WalletLabel">
               Connected Wallet: {account[0]}
             </label>
-            <div className="NetworkBox">
-              <label className="NetworkLabel" style={{ marginLeft: "auto" }}>
-                {networkName}
-              </label>
-            </div>
+            <label className="NetworkLabel">{network}</label>
           </div>
           <div className="line"></div>
           <label className="InputInfo">
