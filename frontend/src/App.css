@@ -37,7 +37,9 @@
   font-size: 25px;
   margin-top: 7px;
   margin-bottom: 5px;
+  border-radius: 10px; /* Add this line to set the border radius */
 }
+
 
 .InputLine {
   margin: 15px;
@@ -87,7 +89,7 @@
 .DeployedContractInfo {
   font-size: 25px;
   font-weight: bolder;
-  color: darkblue;
+  color: whitesmoke;
   margin-left: 20px;
   margin-bottom: 25px;
   margin-top: 25px;
@@ -96,7 +98,7 @@
 .NextStepsInfo {
   font-size: 25px;
   font-weight: bolder;
-  color: darkblue;
+  color: whitesmoke;
   margin-left: 20px;
   margin-bottom: 5px;
   margin-top: 25px;
@@ -105,7 +107,7 @@
 .NextStepsList {
   font-size: 20px;
   font-weight: bold;
-  color: navy;
+  color: whitesmoke;
   margin-left: 75px;
 }
 
@@ -114,10 +116,10 @@
   font-weight: bolder;
   padding: 5px;
   border-radius: 7px;
-  border-color: darkblue;
+  border-color: whitesmoke;
   border-style: double;
   font-size: 20px;
-  color: darkblue;
+  color: whitesmoke;
   background-color: white;
   margin-bottom: 20px;
   margin-top: 5px;
