@@ -67,15 +67,15 @@
 
 .WalletLabel {
   font-family: "Arial", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   margin-left: auto;
   color: whitesmoke;
   float: left;
   position: relative;
   display: inline-block;
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 8px 18px;
+  border-radius: 18px;
   background-color: rgba(
     15,
     200,
@@ -125,15 +125,15 @@
 
 .NetworkLabel {
   font-family: "Arial", sans-serif;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: bold;
   margin-left: auto;
   color: whitesmoke;
   float: right;
   position: relative;
   display: inline-block;
-  padding: 10px 20px;
-  border-radius: 20px;
+  padding: 8px 18px;
+  border-radius: 18px;
   background-color: rgba(15,200,237,0.25);
   text-transform: uppercase; /* Added text-transform property */
 }
