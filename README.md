@@ -1,4 +1,6 @@
 # Employee Salary Payment Automation Application
+<img width="1794" alt="image" src="https://github.com/ThomasHeim11/Web3-Project-/assets/106417552/528e1375-8674-43af-8eee-aff08dcd1fbd">
+
 
 ## Description:
 ChainSalery is a employee salary payment automation application built using Chainlink Keepers. It leverages Chainlink's smart contract automation capabilities to automate salary payments in ETH to desired employees on a biweekly basis.
