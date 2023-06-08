@@ -14,11 +14,15 @@ function NextSteps() {
           Chainlink Keepers Registry
         </a>
       </li>
-      <li>Select "Custom logic" trigger</li>
-      <li>Enter deployed contract address</li>
-      <li>Enter Upkeep details including how much LINK to fund Upkeep with</li>
-      <li>Confirm transaction</li>
-      <li>
+      <li className="sm:text-sm md:text-base">Select "Custom logic" trigger</li>
+      <li className="sm:text-sm md:text-base">
+        Enter deployed contract address
+      </li>
+      <li className="sm:text-sm md:text-base">
+        Enter Upkeep details including how much LINK to fund Upkeep with
+      </li>
+      <li className="sm:text-sm md:text-base">Confirm transaction</li>
+      <li className="sm:text-sm md:text-base">
         Fund your Upkeep contract with ETH to automate future salary payments
       </li>
     </ol>
