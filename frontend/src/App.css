@@ -38,7 +38,7 @@
   margin-top: 7px;
   margin-bottom: 5px;
   border-radius: 10px;
-  color: black; /* Add this line to set the text color to black */
+  color: black;
 }
 
 .InputLine {
@@ -78,12 +78,7 @@
   display: inline-block;
   padding: 8px 18px;
   border-radius: 18px;
-  background-color: rgba(
-    15,
-    200,
-    237,
-    0.25
-  ); /* Use the desired blue color value and alpha value (0.5 for 50% transparency) */
+  background-color: rgba(15, 200, 237, 0.25);
 }
 
 .DeployedContractInfo {
@@ -106,22 +101,20 @@
 
 .NextStepsList {
   background: rgba(0, 0, 128, 0.18);
-  color: #FFFFFF;
+  color: #ffffff;
   padding: 38px;
   border-radius: 30px;
-  font-size: 20px; /* Adjust the font size as needed */
-  line-height: 1.5; /* Set the line height to ensure proper spacing */
+  font-size: 20px;
+  line-height: 1.5;
   width: 80%;
   margin-left: 5%;
 }
 
 .NextStepsList li {
-  padding: 5px 0; /* Adjust the vertical padding as needed */
+  padding: 5px 0;
   list-style-type: decimal;
-  font-size: 18px; /* Adjust the font size for the list items as needed */
+  font-size: 18px;
 }
-
-
 
 .Deploy {
   width: 150px;
@@ -149,7 +142,7 @@
   padding: 8px 18px;
   border-radius: 18px;
   background-color: rgba(15, 200, 237, 0.25);
-  text-transform: uppercase; /* Added text-transform property */
+  text-transform: uppercase;
 }
 
 .Header {
