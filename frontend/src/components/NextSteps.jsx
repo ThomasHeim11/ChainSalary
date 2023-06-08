@@ -8,6 +8,8 @@ function NextSteps() {
         <a
           className="DeployedLink"
           href="https://automation.chain.link/sepolia"
+          target="_blank"
+          rel="noopener noreferrer"
         >
           Chainlink Keepers Registry
         </a>
