@@ -15,6 +15,17 @@ https://chainsalary.surge.sh/
 6. Confirm the registration.
 7. Fund contract with some ETH so salary payments can be automated on a biweekly basis.
 
+## Smart Contract
+The contract has the following features:
+
+- The contract owner can set the Keeper Registry address, employee's salary amount in USD, and the employee's address.
+- The contract uses the Chainlink price feed to get the latest price of ETH in USD.
+- The contract implements the checkUpkeep and performUpkeep functions required by the KeeperCompatible interface. The checkUpkeep function checks if the upkeep is needed based on the time frame (biweekly in this case), and the performUpkeep function pays the employee if the required time has passed.
+- The contract includes a fallback function to receive ETH.
+- The contract provides functions to set and get the Keeper Registry address, employee's salary, and employee's address.
+- The contract allows the contract owner to fund the contract with ETH, pause and unpause the contract, and withdraw the contract balance.
+- Please note that the contract uses a specific Chainlink price feed contract address (0x694AA1769357215DE4FAC081bf1f309aDC325306) for the ETH/USD price on the - - - - Sephia Testnet. You may need to update this address to the correct price feed address for the desired network.
+
 ### Frameworks/Languages Used:
 * Solidity
 * Hardhat
