@@ -4,7 +4,7 @@
 This is a simple employee salary payment automation application that was built using Chainlink Keepers. Chainlink Keepers allow for smart contract automation which allows for the employer, in this case, to simply fund the contract with ETH and LINK to start automating salary payments in ETH to their desired employee on a biweekly basis.
 
 ## Website/Application: 
-https://eth-salary-automation.vercel.app/
+(https://chainsalary.surge.sh/)
 
 ## How It Works:
 1. Install Metamask and connect wallet to access application.
