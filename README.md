@@ -24,7 +24,7 @@ The contract has the following features:
 - The contract includes a fallback function to receive ETH.
 - The contract provides functions to set and get the Keeper Registry address, employee's salary, and employee's address.
 - The contract allows the contract owner to fund the contract with ETH, pause and unpause the contract, and withdraw the contract balance.
-- Please note that the contract uses a specific Chainlink price feed contract address (0x694AA1769357215DE4FAC081bf1f309aDC325306) for the ETH/USD price on the - - - - Sephia Testnet. You may need to update this address to the correct price feed address for the desired network.
+- Please note that the contract uses a specific Chainlink price feed contract address (0x694AA1769357215DE4FAC081bf1f309aDC325306) for the ETH/USD price on the Sepolia Testnet. You may need to update this address to the correct price feed address for the desired network.
 
 ### Frameworks/Languages Used:
 * Solidity
