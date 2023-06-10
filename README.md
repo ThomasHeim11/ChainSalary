@@ -8,6 +8,9 @@ ChainSalery is a employee salary payment automation application built using Chai
 ## Website/Application: 
 https://chainsalary.surge.sh/
 
+## Video Showcase
+https://www.youtube.com/watch?v=wIJI0GYEtsw&t=201s
+
 ## How It Works:
 1. Install Metamask and connect wallet to access application.
 2. Enter details about employee's address, employee's salary amount (biweekly), and the Chainlink Keepers Registry address (Ethereum Mainnet).
