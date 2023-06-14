@@ -40,3 +40,5 @@ The contract has the following features:
 
 ### Built using Chainlink
 This project utilizes Chainlink products such as Chainlink Keepers and Chainlink price feeds. For more information, visit [Chainlink](https://chain.link/).
+
+[![Thomas HeimLinkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/thomas-heim11/)
